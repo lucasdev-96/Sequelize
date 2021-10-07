@@ -4,7 +4,8 @@ const city = (sequelize, DataTypes) => {
     actor_id:
     { 
       type: DataTypes.INTEGER, 
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true,
      },
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,

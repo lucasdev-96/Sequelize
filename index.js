@@ -16,8 +16,8 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/categories', async (req, res) => {
-  const { name } = req.body;
-  const category = await models.actor.create({ name });
+  const { first_name, last_name } = req.body;
+  const category = await models.actor.create({ first_name, last_name });
   res.status(200).json(category);
 });
 
