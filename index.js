@@ -1,10 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 
 const models = require('./models/index')
 
 const PORT = 3000;
+
+app.use(bodyParser.json());
 
 
 app.get('/', async (req, res) => {
